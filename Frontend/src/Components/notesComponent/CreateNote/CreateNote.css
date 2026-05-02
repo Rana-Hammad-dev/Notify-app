@@ -1,0 +1,113 @@
+.createnote {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas:
+        "box1 box1"
+        "box2 box2";
+    border: 1px solid var(--border-color);
+    border-radius: 13px;
+    padding: 2em;
+    gap: 1em;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.newnoteform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    gap: 2em;
+    min-height: 100vh;
+}
+
+.newnoteform h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--primary-color);
+    font-size: 4em;
+}
+
+.createnote textarea {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    padding: 1em;
+    width: 100%;
+    color: var(--text-color);
+}
+
+.notebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.exiticon {
+    font-size: 2em;
+    color: var(--text-color);
+}
+
+.notebar input {
+    width: 100%;
+    font-size: 1.8em;
+    padding: .2em 1em;
+    background-color: var(--bg-color);
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    color: var(--text-color);
+}
+
+.notebar input {
+    background-color: var(--secondary-color);
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 50px;
+    padding: .7em 2em;
+    width: 100%;
+}
+
+.side {
+    display: none;
+}
+
+@media (max-width:650px) {
+    .newnoteform {
+        padding: 1em;
+        gap: 1em;
+    }
+
+    .newnoteform h1 {
+        font-size: 3em;
+    }
+
+    .createnote {
+        padding: 1em;
+        gap: 1em;
+    }
+
+    .newnoteform h1 {
+        font-size: 1.4em;
+    }
+
+    .notebar input {
+        font-size: 1em;
+        padding: 1em;
+    }
+
+    .btn {
+        font-size: 1em;
+    }
+}

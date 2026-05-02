@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #4F46E5;
+    --secondary-color: #F8FAFC;
+    --text-color: #0F172A;
+    --bg-color: #ffffff;
+    --card-bg: #F1F5F9;
+    --border-color: #E2E8F0;
+}
+
+[data-theme="dark"] {
+    --primary-color: #6366F1;
+    --secondary-color: #1E1B4B;
+    --text-color: #F1F5F9;
+    --bg-color: #0F172A;
+    --card-bg: #1E293B;
+    --border-color: #334155;
+}

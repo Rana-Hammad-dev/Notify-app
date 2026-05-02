@@ -1,0 +1,36 @@
+.CreateNoteBotton {
+    background-color: var(--primary-color);
+    padding: .7em;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4em;
+    border: none;
+    font-size: 1.3em;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    outline: none;
+    color: white;
+}
+
+.CreateNoteBotton:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+    transition: all .4s ease-in;
+}
+
+.addicon {
+    font-size: 1.8em;
+}
+
+@media (max-width:850px) {
+    .CreateNoteBotton {
+        bottom: 15%;
+    }
+
+    .addicon {
+        font-size: 1.2em;
+    }
+}
