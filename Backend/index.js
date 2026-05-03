@@ -7,9 +7,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-app.use(cors({
-    origin: "https://notify-app-six.vercel.app"
-}));
+app.use(cors({ origin: "*" }));
 
 // database connecting
 const connecting = require("./Database/Connection/connection")
