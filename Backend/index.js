@@ -1,13 +1,11 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT || 8001;
+const PORT = process.env.PORT || 8000;
 const cors = require("cors");
 app.use(cors({ origin: "*" }));
 app.use(express.json());
-// database connecting
-const connecting = require("./Database/Connection/connection")
-// routes
+const connecting = require("./Database/Connection/connection");
 const notesRoute = require("./Routes/notes.routes");
 app.use("/", notesRoute);
 app.listen(PORT, () => { console.log(`Server Started at port ${PORT}`) });
