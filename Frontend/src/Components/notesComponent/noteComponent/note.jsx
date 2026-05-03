@@ -10,7 +10,7 @@ const Note = ({ note, setNotes }) => {
 
     async function deleteNote(id) {
 
-        const res = await fetch(`http://localhost:8000/notes/${id}`, {
+        const res = await fetch(`https://notify-app-production.up.railway.app/notes/${id}`, {
             method: "DELETE",
         });
 
@@ -20,7 +20,7 @@ const Note = ({ note, setNotes }) => {
     }
 
     async function handleFavorite(id) {
-        const res = await fetch(`http://localhost:8000/notes/${id}`, {
+        const res = await fetch(`https://notify-app-production.up.railway.app/notes/${id}`, {
             method: "PUT"
         });
 

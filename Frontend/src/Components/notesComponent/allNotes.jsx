@@ -8,7 +8,7 @@ const allNotes = ({ query }) => {
 
     useEffect(() => {
         const fetchNotes = async () => {
-            const res = await fetch("http://localhost:8000/notes");
+            const res = await fetch("https://notify-app-production.up.railway.app/notes");
             const data = await res.json();
             setNotes(data.notes);
         }

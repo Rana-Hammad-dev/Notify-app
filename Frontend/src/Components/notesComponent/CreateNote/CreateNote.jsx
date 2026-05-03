@@ -17,7 +17,7 @@ const CreateNote = (props) => {
 
     useEffect(() => {
         const fetchNote = async () => {
-            const res = await fetch(`http://localhost:8000/notes/${id}`);
+            const res = await fetch(`https://notify-app-production.up.railway.app/notes/${id}`);
             const data = await res.json();
 
             setTitle(data.note.title);
@@ -31,7 +31,7 @@ const CreateNote = (props) => {
         e.preventDefault();
 
         if (id) {
-            const res = await fetch(`http://localhost:8000/editnote/${id}`, {
+            const res = await fetch(`https://notify-app-production.up.railway.app/editnote/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const CreateNote = (props) => {
             const data = await res.json();
             setResponse(data.msg);
         } else {
-            const res = await fetch("http://localhost:8000/createnote", {
+            const res = await fetch("https://notify-app-production.up.railway.app/createnote", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

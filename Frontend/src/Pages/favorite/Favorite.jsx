@@ -8,7 +8,7 @@ import Sidebar from '../../Components/commonComponent/Sidebar/Sidebar'
 const Favorite = () => {
     const [notes, setNotes] = useState([])
     useEffect(() => {
-        fetch("http://localhost:8000/favorites")
+        fetch("https://notify-app-production.up.railway.app/favorites")
             .then(res => res.json())
             .then(data => setNotes(data.notes));
     }, []);
